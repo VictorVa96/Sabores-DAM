@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Restaurante Sabores DAM</title>
+
 </head>
 <body>
 	<header>
@@ -153,9 +154,30 @@
 		</aside>
 
 
-		<dialog>
-			
+		<dialog id = "ventana">
+			<h3>Solicitud de reserva</h3>
+			<ul>
+				<li>Max: 6 personas</li>
+				<li>Se debe avisar 24 horas antes para cambiar reserva</li>
+				<li>La reserva se debe hacer con una antelacion minima de 2 horas</li>
+				<li>Nos reservamos el derecho, dependiendo de aforo, de reembolsar su reversa</li>
+			</ul>
+			<button id = "cerrar">Cerrar</button>
 		</dialog>
+
+
+
+		<button id = "abrir">Reservar Mesa</button>
+
+		<script>
+			const dialog = document.getElementById('ventana')
+			document.getElementById('abrir').onclick= () => dialog.showModal();
+			document.getElementById('cerrar').onclick= () => dialog.close();
+		</script>
+
+
+
+		
 		
 	</main>
 
